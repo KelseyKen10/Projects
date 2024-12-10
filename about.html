@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon for the website -->
+    <link rel="icon" href="favicon.jpg" type="image/JPEG">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <img src="Kelsey.jpg" alt="Kelsey Lynn Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Me</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <section class="features">
+                <!-- First Picture of Me (Slideshow Section) -->
+                <div class="feature-box slideshow-container">
+                    <h3>Pictures!</h3>
+                    <div class="slideshow">
+                        <img src="picture1.jpeg" alt="Picture 1" class="slide" style="display: block;">
+                        <img src="picture2.jpeg" alt="Picture 2" class="slide" style="display: none;">
+                        <img src="picture3.jpeg" alt="Picture 3" class="slide" style="display: none;">
+                        <img src="picture4.jpeg" alt="Picture 4" class="slide" style="display: none;">
+                        <img src="picture5.jpeg" alt="Picture 5" class="slide" style="display: none;">
+                    </div>
+                    <div class="slideshow-controls">
+                        <span class="prev" onclick="changeSlide(0, -1)">&#10094;</span>
+                        <span class="next" onclick="changeSlide(0, 1)">&#10095;</span>
+                    </div>
+                </div>
+
+                <!-- Introduction Section -->
+                <div class="feature-box">
+                    <h3>Introduction</h3>
+                    <p> Hi, I’m Kelsey! I’m a Junior at Towson University, studying Information Technology with a focus on Network Security. I’m also proud to serve as the president of our Women in Cybersecurity (WiCyS) chapter.</p>
+                </div>
+
+                <!-- Second Picture of Me (Slideshow Section) -->
+                <div class="feature-box slideshow-container">
+                    <h3>Personal Interests </h3>
+                    <div class="slideshow">
+                        <img src="picture6.jpeg" alt="Picture 6" class="slide" style="display: block;">
+                        <img src="picture7.jpeg" alt="Picture 7" class="slide" style="display: none;">
+                        <img src="picture8.jpeg" alt="Picture 8" class="slide" style="display: none;">
+                        <img src="picture9.jpeg" alt="Picture 9" class="slide" style="display: none;">
+
+                    </div>
+                    <div class="slideshow-controls">
+                        <span class="prev" onclick="changeSlide(1, -1)">&#10094;</span>
+                        <span class="next" onclick="changeSlide(1, 1)">&#10095;</span>
+                    </div>
+                </div>
+
+                <!-- Personal Interests Section -->
+                <div class="feature-box">
+                    <h3>Personal Interests</h3>
+                    <p>I love being invloved with school.I also enjoy doing hair during my free time! </p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Kelsey Lynn. All rights reserved.</p>
+        </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Slideshow JavaScript ( this is to allow the pictures to move on its own without you manually clicking on them)-->
+        <script>
+            const slideshows = document.querySelectorAll(".slideshow-container");
+
+            function changeSlide(slideshowIndex, direction) {
+                const slides = slideshows[slideshowIndex].querySelectorAll(".slide");
+                let currentSlideIndex = Array.from(slides).findIndex(slide => slide.style.display === "block");
+                slides[currentSlideIndex].style.display = "none";
+                currentSlideIndex = (currentSlideIndex + direction + slides.length) % slides.length;
+                slides[currentSlideIndex].style.display = "block";
+            }
+
+            slideshows.forEach((slideshow, index) => {
+                setInterval(() => changeSlide(index, 1), 3000); // Auto-slide every 3 seconds
+            });
+        </script>
+    </div>
+</body>
+</html>

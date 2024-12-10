@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - My Website</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    
+    <style>
+        /* Add gradient background */
+        body {
+            background: linear-gradient(to bottom, #ADD8E6, #FFE4E1); /* Light blue to light pink */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #3058ad; 
+            margin-bottom: 20px;
+        }
+
+        header {
+            background-color: #ffffff; /* White background for header */
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header img.logo {
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid #ADD8E6;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #073596;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #90EE90; /* Light green on hov */
+        }
+
+        main {
+            margin: 30px auto;
+            max-width: 1200px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* a transparent white background */
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .feature-box {
+            background-color: #f8f8f8;
+            border: 1px solid #ADD8E6;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-box:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(16, 119, 160, 0.3);
+        }
+
+        .feature-box h3 {
+            color: #32829b;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ADD8E6;
+            color: #333;
+            margin-top: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <h1>Welcome to Kelsey's Webpage!</h1>
+            <img src="kelsey.jpg" alt="Kelsey Lynn Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="about.html" class="interactive">About Me</a></li>
+                    <li><a href="blog.html" class="interactive">Blog</a></li>
+                    <li><a href="portfolio.html" class="interactive">Portfolio</a></li>
+                    <li><a href="contact.html" class="interactive">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <section class="features">
+                <!-- About Me Section -->
+                <a href="about.html" class="feature-box interactive">
+                    <h3>About Me</h3>
+                    <p>Learn more about my background and interests.</p>
+                </a>
+
+                <!-- Blog Section -->
+                <a href="blog.html" class="feature-box interactive">
+                    <h3>Blog</h3>
+                    <p>Read my latest thoughts on lifestyle, music, and career.</p>
+                </a>
+
+                <!-- Portfolio Section -->
+                <a href="portfolio.html" class="feature-box interactive">
+                    <h3>Portfolio</h3>
+                    <p>Check out my projects and volunteer work.</p>
+                </a>
+
+                <!-- Contact Section -->
+                <a href="contact.html" class="feature-box interactive">
+                    <h3>Contact</h3>
+                    <p>Reach out to me using the contact form.</p>
+                </a>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 Kelsey Lynn. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!--  JavaScript for more activity -->
+    <script>
+        const interactiveLinks = document.querySelectorAll('.interactive');
+        interactiveLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.color = '#90EE90'; // Light green
+            });
+            link.addEventListener('mouseout', () => {
+                link.style.color = ''; // Reset color
+            });
+        });
+    </script>
+</body>
+</html>

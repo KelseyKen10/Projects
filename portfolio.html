@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!-- favicon logo for the website -->
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <style>
+        /* Inline CSS for custom font styles */
+        .section-title {
+            font-family: 'Georgia', serif; /* Use a cursive-like serif font */
+            font-style: italic; /* makes the font cursive */
+            font-size: 3rem; /* font size */
+            color: #6495ed; 
+            text-align: center; 
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="Kelsey.jpg" alt="Kelsey Lynn Logo" class="logo">
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--  Projects Section -->
+        <section>
+            <h2 class="section-title">Coding Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Description</th>
+                        <th>Technologies Used</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Machine Learning Model for Anomaly Detection</td>
+                        <td>Developed a machine learning model to detect anomalies in datasets, focusing on ransomware detection.</td>
+                        <td>Python, scikit-learn</td>
+                    </tr>
+                    <tr>
+                        <td>Cybersecurity SQL Injection Detection</td>
+                        <td>Created a system to identify and mitigate SQL injection attacks using AI-based methods.</td>
+                        <td>Python, AI Techniques</td>
+                    </tr>
+                    <tr>
+                        <td>HTML/CSS Portfolio Website</td>
+                        <td>Built a fully responsive personal portfolio website to showcase my projects and experiences.</td>
+                        <td>HTML, CSS, JavaScript</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- this is the volunteer work section-->
+        <section>
+            <h2 class="section-title">Volunteer Projects</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Technology Workshops in Cameroon</td>
+                        <td>Has workshops to teach basic computer skills and coding to underprivileged students in Cameroon, empowering them with digital literacy.</td>
+                    </tr>
+                    <tr>
+                        <td>Community Cybersecurity Awareness</td>
+                        <td>Organized sessions to educate individuals about online safety and cybersecurity best practices.</td>
+                    </tr>
+                    <tr>
+                        <td>Donation Drives for School Supplies</td>
+                        <td>Led donation drives to collect school supplies for children in Cameroon, ensuring they have the tools needed to succeed academically.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kelsey Lynn. All rights reserved.</p>
+    </footer>
+</body>
+</html>
